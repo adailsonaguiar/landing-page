@@ -58,6 +58,70 @@ export type SectionModulesProp = {
   ]
 }
 
+export type SectionAgendaProp = {
+  title: string
+  description: string
+}
+
+export type PricingBoxProp = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
+}
+
+export type SectionAboutUsProp = {
+  title: string
+  authors: [
+    {
+      id: string
+      photo: {
+        url: string
+        alternativeText: string
+      }
+      name: string
+      role: string
+      socialLinks: [
+        {
+          id: string
+          title: string
+        }
+      ]
+    }
+  ]
+  description
+}
+
+export type SectionReviewsProp = {
+  title: string
+  reviews: [
+    {
+      id: string
+      name: string
+      text: string
+      photo: {
+        url: string
+        alternativeText: string
+      }
+    }
+  ]
+}
+
+export type SectionFaqProp = {
+  title: string
+  questions: [
+    {
+      id: string
+      question: string
+      answer: string
+    }
+  ]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -65,4 +129,9 @@ export type LandingPageProps = {
   sectionTech: SectionTechProp
   sectionConcepts: SectionConceptsProp
   sectionModules: SectionModulesProp
+  sectionAgenda: SectionAgendaProp
+  pricingBox: PricingBoxProp
+  sectionAboutUs: SectionAboutUsProp
+  sectionReviews: SectionReviewsProp
+  sectionFaq: SectionFaqProp
 }
