@@ -8,9 +8,9 @@ import { Author } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
 
 const icons = {
-  twitter: <FaTwitter />,
-  github: <GrGithub />,
-  dribbble: <FaDribbble />
+  Twitter: <FaTwitter />,
+  Github: <GrGithub />,
+  Dribbble: <FaDribbble />
 }
 
 const ProfileCard: React.FC<Author> = ({
@@ -27,7 +27,7 @@ const ProfileCard: React.FC<Author> = ({
     <S.SocialLinks>
       {socialLinks.map((item) => (
         <S.Link key={item.id}>
-          <a href={item.title} title={item.title}>
+          <a href={item.url} title={item.title}>
             {icons[item.title]}
           </a>
         </S.Link>

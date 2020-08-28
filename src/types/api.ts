@@ -70,6 +70,7 @@ export type PricingBoxProp = {
 export type SocialLink = {
   id: string
   title: string
+  url: string
 }
 
 export type Author = {
@@ -85,16 +86,16 @@ export type SectionAboutUsProp = {
   authors: Author[]
 }
 
+export type Review = {
+  id: string
+  name: string
+  text: string
+  photo: Image
+}
+
 export type SectionReviewsProp = {
   title: string
-  reviews: [
-    {
-      id: string
-      name: string
-      text: string
-      photo: Image
-    }
-  ]
+  reviews: Review[]
 }
 
 export type SectionFaqProp = {

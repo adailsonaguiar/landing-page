@@ -5,8 +5,9 @@ import Heading from 'components/Heading'
 
 import faq from './content'
 import * as S from './styles'
+import { SectionFaqProp } from 'types/api'
 
-const SectionFaq = () => (
+const SectionFaq = ({ title, questions }: SectionFaqProp) => (
   <S.Wrapper>
     <S.Content>
       <Container>

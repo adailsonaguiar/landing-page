@@ -99,6 +99,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
         socialLinks {
           id
           title
+          url
         }
         description
       }
