@@ -98,15 +98,15 @@ export type SectionReviewsProp = {
   reviews: Review[]
 }
 
+export type Question = {
+  id: string
+  question: string
+  answer: string
+}
+
 export type SectionFaqProp = {
   title: string
-  questions: [
-    {
-      id: string
-      question: string
-      answer: string
-    }
-  ]
+  questions: Question[]
 }
 
 export type LandingPageProps = {
