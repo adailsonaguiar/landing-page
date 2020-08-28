@@ -10,7 +10,6 @@ import * as S from './styles'
 const SectionAboutUs = ({ title, authors }: SectionAboutUsProp) => (
   <Container>
     <Heading reverseColor>{title}</Heading>
-    {console.log(authors)}
     <S.Content>
       {authors.map((profile) => (
         <ProfileCard
