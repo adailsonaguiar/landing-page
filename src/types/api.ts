@@ -1,7 +1,9 @@
-export type LogoProps = {
+export type Image = {
   alternativeText: string
   url: string
 }
+
+export type LogoProps = Image
 
 export type HeaderProps = {
   title: string
@@ -10,29 +12,20 @@ export type HeaderProps = {
     label: string
     url: string
   }
-  image: {
-    alternativeText: string
-    url: string
-  }
+  image: Image
 }
 
 export type SectionAboutProjectProps = {
   title: string
   description: string
-  image: {
-    url: string
-    alternativeText: string
-  }
+  image: Image
 }
 
 export type SectionTechProp = {
   title: string
   techIcons: [
     {
-      icon: {
-        url: string
-        alternativeText: string
-      }
+      icon: Image
       title: string
     }
   ]
@@ -74,26 +67,22 @@ export type PricingBoxProp = {
   }
 }
 
+export type SocialLink = {
+  id: string
+  title: string
+}
+
+export type Author = {
+  id: string
+  description: string
+  photo: Image
+  name: string
+  role: string
+  socialLinks: SocialLink[]
+}
 export type SectionAboutUsProp = {
   title: string
-  authors: [
-    {
-      id: string
-      photo: {
-        url: string
-        alternativeText: string
-      }
-      name: string
-      role: string
-      socialLinks: [
-        {
-          id: string
-          title: string
-        }
-      ]
-    }
-  ]
-  description
+  authors: Author[]
 }
 
 export type SectionReviewsProp = {
@@ -103,10 +92,7 @@ export type SectionReviewsProp = {
       id: string
       name: string
       text: string
-      photo: {
-        url: string
-        alternativeText: string
-      }
+      photo: Image
     }
   ]
 }
