@@ -12,14 +12,7 @@ const SectionAboutUs = ({ title, authors }: SectionAboutUsProp) => (
     <Heading reverseColor>{title}</Heading>
     <S.Content>
       {authors.map((profile) => (
-        <ProfileCard
-          key={profile.id}
-          name={profile.name}
-          role={profile.role}
-          photo={profile.photo}
-          socialLinks={profile.socialLinks}
-          description={profile.description}
-        />
+        <ProfileCard key={profile.id} {...profile} />
       ))}
     </S.Content>
   </Container>
