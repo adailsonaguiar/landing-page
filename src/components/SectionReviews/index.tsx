@@ -35,14 +35,8 @@ const SectionReviews = ({ title, reviews }: SectionReviewsProp) => (
     <Heading reverseColor>{title}</Heading>
     <S.Content>
       <Slider {...settings}>
-        {reviews.map(({ name, photo, text }, index) => (
-          <ReviewCard
-            key={index}
-            name={name}
-            photo={photo}
-            text={text}
-            id={index}
-          />
+        {reviews.map((review, index) => (
+          <ReviewCard key={index} {...review} />
         ))}
       </Slider>
     </S.Content>
